@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "317241679287",
+    "project_id": "nmt-apd-assignment",
+    "storage_bucket": "nmt-apd-assignment.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317241679287:android:5a202f04eff4169d221c32",
+        "android_client_info": {
+          "package_name": "com.exampl.nmt_apdp_assignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxpZ8kK6z_4ABXfbJlDu65GMxuzZuO4_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317241679287:android:27580c7e510be8b0221c32",
+        "android_client_info": {
+          "package_name": "com.example.nmt_apdp_assignment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxpZ8kK6z_4ABXfbJlDu65GMxuzZuO4_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
