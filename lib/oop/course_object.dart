@@ -16,6 +16,8 @@ class CourseObject {
     required this.durationInWeek,
   }) : _id = id;
 
+  String get courseId => _id;
+
   // Method to convert the object to a Firebase Map
   Map<String, dynamic> toFirebaseMap() {
     return {

@@ -1,6 +1,5 @@
 class RecordObject {
   final String _id;
-  String studentId;
   DateTime enrollmentDate;
   String section;
   String courseId;
@@ -10,7 +9,6 @@ class RecordObject {
 
   RecordObject(
       {required String id,
-      required this.studentId,
       required this.enrollmentDate,
       required this.section,
       required this.courseId,
@@ -22,7 +20,6 @@ class RecordObject {
   Map<String, dynamic> toFirebaseMap() {
     return {
       'id': _id,
-      'studentId': studentId,
       'enrollmentDate': enrollmentDate,
       'section': section,
       'courseId': courseId,
@@ -35,7 +32,6 @@ class RecordObject {
   static RecordObject fromFirebaseMap(Map<String, dynamic> map) {
     return RecordObject(
         id: map['id'],
-        studentId: map['studentId'],
         enrollmentDate: map['enrollmentDate'],
         section: map['section'],
         courseId: map['courseId'],

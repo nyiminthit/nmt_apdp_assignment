@@ -6,7 +6,7 @@ class StudentObject implements PersonAbstract {
   String _id;
   @override
   String name;
-  List<String> contactInfo;
+  Map<String, String> contactInfo;
   String section;
   List<RecordObject> records;
   double discountPercent;
@@ -33,7 +33,10 @@ class StudentObject implements PersonAbstract {
   }
 
   static StudentObject fromFirebaseMap(Map<String, dynamic> map) {
-    List<String> contactInfo = List<String>.from(map['contactInfo']);
+    // Change here: contactInfo is now expected as a Map<String, String>
+    Map<String, String> contactInfo =
+        Map<String, String>.from(map['contactInfo']);
+
     List<RecordObject> records = (map['records'] as List<dynamic>)
         .map((recordMap) => RecordObject.fromFirebaseMap(recordMap))
         .toList();
