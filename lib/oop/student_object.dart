@@ -20,6 +20,8 @@ class StudentObject implements PersonAbstract {
       this.discountPercent = 0.0})
       : _id = id;
 
+  String get studentId => _id;
+
   Map<String, dynamic> toFirebaseMap() {
     return {
       "id": _id,
