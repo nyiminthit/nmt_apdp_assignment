@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:nmt_apdp_assigment/student_list_page.dart';
 import 'package:nmt_apdp_assigment/student_register_page.dart';
 
 void main() async {
@@ -33,7 +34,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StudentRegisterPage(),
+      home: StudentListPage(),
     );
   }
 }

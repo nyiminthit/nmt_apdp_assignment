@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart'; // Import this for Timestamp
+
 class RecordObject {
   final String _id;
   DateTime enrollmentDate;
@@ -7,15 +9,15 @@ class RecordObject {
   double finalCost;
   double discount;
 
-  RecordObject(
-      {required String id,
-      required this.enrollmentDate,
-      required this.section,
-      required this.courseId,
-      required this.courseName,
-      required this.finalCost,
-      required this.discount})
-      : _id = id;
+  RecordObject({
+    required String id,
+    required this.enrollmentDate,
+    required this.section,
+    required this.courseId,
+    required this.courseName,
+    required this.finalCost,
+    required this.discount,
+  }) : _id = id;
 
   Map<String, dynamic> toFirebaseMap() {
     return {
@@ -25,18 +27,19 @@ class RecordObject {
       'courseId': courseId,
       'courseName': courseName,
       'finalCost': finalCost,
-      'discount': discount
+      'discount': discount,
     };
   }
 
   static RecordObject fromFirebaseMap(Map<String, dynamic> map) {
     return RecordObject(
-        id: map['id'],
-        enrollmentDate: map['enrollmentDate'],
-        section: map['section'],
-        courseId: map['courseId'],
-        courseName: map['courseName'],
-        finalCost: map['finalCost'],
-        discount: map['discount']);
+      id: map['id'],
+      enrollmentDate: (map['enrollmentDate'] as Timestamp).toDate(),
+      section: map['section'],
+      courseId: map['courseId'],
+      courseName: map['courseName'],
+      finalCost: map['finalCost'],
+      discount: map['discount'],
+    );
   }
 }
