@@ -62,7 +62,7 @@ class _StudentEditPageState extends State<StudentEditPage> {
         title: const Text('Edit Student'),
         backgroundColor: Colors.deepPurple,
         elevation: 0,
-        actions: [
+        actions: const [
           LogoutBottom()
         ],
       ),
@@ -281,7 +281,7 @@ class _StudentEditPageState extends State<StudentEditPage> {
                       ),
                     );
                   },
-                ).toList(),
+                ),
 
               const Text(
                 'Unenrolled Courses',
@@ -317,7 +317,7 @@ class _StudentEditPageState extends State<StudentEditPage> {
                       });
                     },
                   );
-                }).toList(),
+                }),
             ],
           ),
         ),

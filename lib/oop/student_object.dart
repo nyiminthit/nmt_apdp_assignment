@@ -2,8 +2,7 @@ import 'package:nmt_apdp_assigment/oop/person_abstract.dart';
 import 'package:nmt_apdp_assigment/oop/record_object.dart';
 
 class StudentObject implements PersonAbstract {
-  @override
-  String _id;
+  final String _id;
   @override
   String name;
   Map<String, String> contactInfo;

@@ -10,4 +10,6 @@ class TeacherObject implements PersonAbstract {
   TeacherObject(
       {required String id, required this.name, required this.contactInfo})
       : _id = id;
+
+  String get teacherId => _id;
 }

@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Dashboard'),
         backgroundColor: Colors.deepPurple,
-        actions: [LogoutBottom()],
+        actions: const [LogoutBottom()],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

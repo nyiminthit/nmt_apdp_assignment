@@ -26,7 +26,7 @@ class StudentObjectMethods {
       StudentObject student, List<CourseObject> courses) async {
     try {
       for (CourseObject course in courses) {
-        var id = Uuid().v1();
+        var id = const Uuid().v1();
         var enrollmentDate = DateTime.now();
         StudentObject determined = StudentObject.factoryMethod(student);
         double finalCost =

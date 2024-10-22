@@ -9,16 +9,16 @@ class LogoutBottom extends StatefulWidget {
 }
 
 class _LogoutBottomState extends State<LogoutBottom> {
-  @override
   void logout() {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (BuildContext context) => LoginPage(),
+        builder: (BuildContext context) => const LoginPage(),
       ),
     );
   }
 
+  @override
   Widget build(BuildContext context) {
-    return IconButton(onPressed: logout, icon: Icon(Icons.login_outlined));
+    return IconButton(onPressed: logout, icon: const Icon(Icons.login_outlined));
   }
 }

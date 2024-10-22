@@ -37,7 +37,7 @@ class _StudentRegisterPageState extends State<StudentRegisterPage> {
         title: const Text('Student Registration'),
         backgroundColor: Colors.deepPurple,
         elevation: 0,
-        actions: [
+        actions: const [
           LogoutBottom()
         ],
       ),
@@ -253,7 +253,7 @@ class _StudentRegisterPageState extends State<StudentRegisterPage> {
                   });
                 },
               );
-            }).toList(),
+            }),
         ],
       ),
     );

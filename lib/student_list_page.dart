@@ -5,7 +5,7 @@ import 'package:nmt_apdp_assigment/oop/student_object.dart';
 import 'package:nmt_apdp_assigment/student_edit_page.dart';
 
 class StudentListPage extends StatefulWidget {
-  const StudentListPage({Key? key}) : super(key: key);
+  const StudentListPage({super.key});
 
   @override
   State<StudentListPage> createState() => _StudentListPageState();
@@ -28,7 +28,7 @@ class _StudentListPageState extends State<StudentListPage> {
 
   void _editStudent(StudentObject student) {
     Navigator.of(context)
-      ..push(
+      .push(
         MaterialPageRoute(
           builder: (BuildContext context) => StudentEditPage(student: student),
         ),
@@ -52,7 +52,7 @@ class _StudentListPageState extends State<StudentListPage> {
       appBar: AppBar(
         title: const Text('Student List'),
         backgroundColor: Colors.deepPurple,
-        actions: [LogoutBottom()],
+        actions: const [LogoutBottom()],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

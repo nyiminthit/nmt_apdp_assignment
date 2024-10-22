@@ -1,5 +1,5 @@
 class CourseObject {
-  String _id;
+  final String _id;
   String title;
   String description;
   double cost;
