@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nmt_apdp_assigment/logout_bottom.dart';
 import 'package:nmt_apdp_assigment/oop/course_object.dart';
 import 'package:nmt_apdp_assigment/oop/object_methods/student_object_methods.dart';
 import 'package:nmt_apdp_assigment/oop/record_object.dart';
@@ -61,6 +62,9 @@ class _StudentEditPageState extends State<StudentEditPage> {
         title: const Text('Edit Student'),
         backgroundColor: Colors.deepPurple,
         elevation: 0,
+        actions: [
+          LogoutBottom()
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
