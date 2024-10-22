@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nmt_apdp_assigment/oop/object_methods/student_object_methods.dart';
 import 'package:nmt_apdp_assigment/oop/student_object.dart';
+import 'package:nmt_apdp_assigment/student_edit_page.dart';
 
 class StudentListPage extends StatefulWidget {
   const StudentListPage({Key? key}) : super(key: key);
@@ -25,8 +26,12 @@ class _StudentListPageState extends State<StudentListPage> {
   }
 
   void _editStudent(StudentObject student) {
-    // Implement edit logic here (e.g., navigate to edit page)
-    // Navigator.push(...)
+    Navigator.of(context)
+      ..push(
+        MaterialPageRoute(
+          builder: (BuildContext context) => StudentEditPage(student: student),
+        ),
+      );
   }
 
   void _deleteStudent(String id) {
